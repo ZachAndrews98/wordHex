@@ -1,36 +1,70 @@
-# wordHex
+# Getting Started with Create React App
 
-Converts inputted word or phrase into hexadecimal color groups. Inspired by
-Numberphile's YouTube video on Illegal Numbers. Works wellish (for someone with
-a little experience writing in python), probably could be done better.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Execution
+## Available Scripts
 
-**This program requires GhostScript and python3-tk**
+In the project directory, you can run:
 
-Fairly straight forward, just execute like any other python3 program.
+### `npm start`
 
-```
-python3 wordHex.py
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-User will be prompted to enter a word to convert to hex. Type in word or phrase
-(no real limit but after a certain point colors are not visible with current
-implementation). After this Turtle will take over and draw each Hexcolor on the
-canvas and will write out the extra hexcode that was not 6 characters long if
-one exists. Then the user will be prompted if they want to save the canvas
-(simple yes/no question). If yes, then the user will be asked to enter a file
-name, the canvas will then be saved in a .ps file with that name, if a file with
-that name already exists, the old file will be overwritten. This file is then
-converted to a .png by gs and then deleted. The canvas must be open for the
-image to be saved, if you close it before saving it will not work.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Improvements
+### `npm test`
 
-If don't end up getting bored with this I'll probably try and improve it myself.
-However, on the off chance that someone stumbled upon this, one- what are you
-doing here?, and on the even smaller chance that you want to improve on this
-system (which probably won't be hard to do), go right ahead. I'm definitely not
-the first person to do this, so take it, modify it, make it hundreds of times
-better. Just let me know if you do, I want to see where I could have done
-something different/better cause its all just about learning and getting better.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
