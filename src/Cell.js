@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Col from 'react-bootstrap/Col';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,6 +20,11 @@ export default function Cell(props) {
     cell = <h2>+ { props.color.slice(1) }</h2>
   }
   return(
-    cell
+    <OverlayTrigger
+      placement="bottom"
+      overlay={<p>{ props.color }</p>}
+    >
+      {cell}
+    </OverlayTrigger>
   );
 }
