@@ -8,7 +8,6 @@ export default function Cell(props) {
   console.log(props)
   let styles = {
     'backgroundColor': props.color,
-    'width': props.width,
     'height': props.height
   }
 

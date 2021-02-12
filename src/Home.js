@@ -23,11 +23,19 @@ export default class Home extends React.Component {
     }
     this.setWordChange = this.setWordChange.bind(this)
     this.colorize = this.colorize.bind(this)
+    this.enterPress = this.enterPress.bind(this)
   }
 
   setWordChange(event) {
     console.log(event.target.value)
     this.setState({word: event.target.value})
+  }
+
+  enterPress(event) {
+    if (event.charCode === 13) {
+      this.colorize()
+      event.preventDefault()
+    }
   }
 
   colorize() {
@@ -65,14 +73,18 @@ export default class Home extends React.Component {
       <Container>
         <Row>
           <Form>
-            <Form.Control placeholder="Message to Colorize" value={this.state.word} onChange={this.setWordChange}/>
+            <Form.Control 
+              placeholder="Message to Colorize" 
+              value={this.state.word} 
+              onChange={this.setWordChange}
+              onKeyPress={this.enterPress}/>
           </Form>
           <Button type="submit" onClick={this.colorize}>Colorize</Button>
         </Row>
         <Row>
           {this.state.groups.map(
             color =>
-            <Cell color={'#' + color.toString()} width={100} height={100} />
+            <Cell color={'#' + color.toString()} height={100} />
           )}
         </Row>
       </Container>
